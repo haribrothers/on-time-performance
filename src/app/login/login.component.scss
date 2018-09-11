@@ -1,0 +1,54 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins/mixins';
+
+.app-container {
+  height: 100%;
+}
+
+.login-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../../assets/images/background.jpg") no-repeat;
+  background-size: cover;
+  background-position: right top;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 35%, 0 50%);
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 50%);
+
+  @include breakpoint-above(md) {
+    -webkit-clip-path: polygon(65% 0, 100% 0, 100% 100%, 44% 100%);
+    clip-path: polygon(65% 0, 100% 0, 100% 100%, 44% 100%);
+  }
+}
+
+.vector-image {
+  position: absolute;
+  right: 0;
+  top: 150px;
+  height: 250px;
+  @include breakpoint-above(sm) {
+    height: 300px;
+  }
+  @include breakpoint-above(md) {
+    top: 50%;
+    margin-top: -200px;
+    height: 400px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 70px;
+}
+
+.mat-toolbar {
+  background-color: transparent;
+}

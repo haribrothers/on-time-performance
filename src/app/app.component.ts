@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'on-time-performance';
+
+  constructor() {
+    console.log('hellooo');
+  }
 }
